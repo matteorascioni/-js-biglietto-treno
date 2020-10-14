@@ -1,15 +1,23 @@
-// PASSEGGERO PREZZO E CHILOMETRI
+// PASSEGGERO
 var passegero = prompt('Inserisci la tua età');
+
+// CHILOMETRI
 var numeroKm = prompt('inserisci il numero di chilometri');
-var prezzoNormalTicket = (0,21 * numeroKm);
 
+// PREZZO ED ETÁ PASSEGERI
+var prezzoTicket = (0,21 * numeroKm);
+var passegeroGiovane = (0,21 * numeroKm);
+var passeggeroAnziano = (0,21 * numeroKm);
+
+// PASSEGERO GIOVANE
 if (passegero < 18){
-    prezzoNormalTicket = (0,17 * numeroKm);
+    prezzoTicket = passegeroGiovane - (prezzoTicket/100*20);
 }
+// PASSEGERO ANZIANO
 if (passegero > 65){
-    prezzoNormalTicket = (0,13 * numeroKm);
+    prezzoTicket = passeggeroAnziano - (prezzoTicket/100*40);
 }
 
-document.getElementById('normalticketprice').innerHTML = 'prezzo del biglietto: ' + prezzoNormalTicket + '€';
+document.getElementById('normalticketprice').innerHTML = 'prezzo del biglietto: ' + prezzoTicket + '€';
 
 

@@ -6,8 +6,8 @@ var numeroKm = prompt('inserisci il numero di chilometri');
 
 // PREZZO ED ETÁ PASSEGERI
 var prezzoTicket = (0,21 * numeroKm);
-var passegeroGiovane = (0,21 * numeroKm);
-var passeggeroAnziano = (0,21 * numeroKm);
+var passegeroGiovane = prezzoTicket;
+var passeggeroAnziano = prezzoTicket;
 
 // PASSEGERO GIOVANE
 if (passegero < 18){
